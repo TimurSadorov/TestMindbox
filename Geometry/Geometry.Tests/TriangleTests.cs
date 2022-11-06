@@ -1,5 +1,3 @@
-using Geometry.Tests.Helpers;
-
 namespace Geometry.Tests;
 
 public class TriangleTests
@@ -65,7 +63,6 @@ public class TriangleTests
         var actualSquare = triangle.GetSquare();
         
         // Assert
-        var isEqual = ComparerHelper.DoubleIsEqual(actualSquare, expectedSquare, 1e-10);
-        Assert.True(isEqual, MessageHelper.GetMessageAboutNotEqualSquare(expectedSquare, actualSquare));
+        Assert.Equal(expectedSquare, actualSquare, 10);
     }
 }

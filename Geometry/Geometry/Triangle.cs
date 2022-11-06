@@ -1,6 +1,6 @@
 ﻿namespace Geometry;
 
-public class Triangle : Figure
+public class Triangle: Figure
 {
     public double A { get; }
 

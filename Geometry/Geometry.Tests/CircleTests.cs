@@ -1,6 +1,4 @@
-﻿using Geometry.Tests.Helpers;
-
-namespace Geometry.Tests;
+﻿namespace Geometry.Tests;
 
 public class CircleTests
 {
@@ -26,7 +24,6 @@ public class CircleTests
         var actualSquare = triangle.GetSquare();
         
         // Assert
-        var isEqual = ComparerHelper.DoubleIsEqual(actualSquare, expectedSquare, 1e-8);
-        Assert.True(isEqual, MessageHelper.GetMessageAboutNotEqualSquare(expectedSquare, actualSquare));
+        Assert.Equal(expectedSquare, actualSquare, 8);
     }
 }
